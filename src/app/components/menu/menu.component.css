@@ -1,0 +1,78 @@
+*{
+  margin: 0;/*el margin no hay*/
+  padding: 0;/*el padding no hay*/
+  box-sizing: border-box;
+  font-family: "Helvetica Neue","Helvetica","Arial";/*tipo de letra*/
+}
+
+nav {
+  max-width: 900px;/*maximo del ancho*/
+  margin: auto;
+  background-color: #bcc2d1;/*color de fondo*/
+  font-size: 20px;/*tamaño de letra*/
+  margin-top: 20px;/*margin de arrida, separacion de la caja en si*/
+  box-shadow: 2px 2px 7px rgba(47, 39, 97, 0.5);
+  text-shadow:2px 2px 7px rgba(40, 35, 51, 0.5); ;
+}
+
+.menu-horizontal{/*las clases se usa el .*/
+  list-style: none;/*quita los puntos de adorno de los <li>*/
+  display: flex;/*acomoda el contenido horizontal y vertical*/
+  justify-content: space-around;/*distribulle el espacio de forma horizontal*/
+}
+
+.menu-horizontal> li >a{
+  display: block;
+  padding: 15px 20px;
+  color: #f5fafa;
+  text-decoration: none;/*quita la raya de las palabras*/
+
+}
+
+.menu-horizontal>li:hover{/*hover actiba esto con poner el mause ensima*/
+  background-color:rgba(140, 186, 238, 0.597);
+  animation: blink 3s infinite;
+}
+
+
+.menu-vertical{
+position: absolute;
+display: none;
+list-style: none;
+width: 300px;
+background-color:rgba(153, 201, 239, 0.5) ;
+box-shadow: 3px 3px 10px -5px  rgba(105, 121, 102, 0.5);
+
+
+}
+
+.menu-horizontal li:hover .menu-vertical{
+  display: block;/*hace aparecer el bloque, lo anula al; display: none tambien combierte en bloque*/
+
+}
+
+.menu-vertical li:hover{/*hover actiba esto con poner el mause ensima*/
+  background-color: rgb(70, 135, 163);
+  animation: blink 3s infinite;
+
+}
+
+.menu-vertical li a{
+  display: block;/*combierte en bloque para tratarlo como tal*/
+  color: white;
+  padding: 10px 10px 10px 15px;
+
+
+}
+
+@keyframes blink {
+  0% {
+    background-color: rgba(84, 76, 108, 0.548);
+  }
+  50% {
+    background-color: rgba(110, 113, 161, 0.406);
+  }
+  100% {
+    background-color: rgba(77, 75, 124, 0.548);
+  }
+}

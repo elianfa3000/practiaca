@@ -1,0 +1,9 @@
+<div>
+  <div *ngFor="let x of modelo; let y = index" class="orden">
+
+    <p>{{x.id}}</p>
+    <p>{{x.title}}</p>
+    <p>{{x.price}}</p>
+    <img width="400px" height="400px" src={{x.images[1]}} alt="">
+  </div>
+</div>
